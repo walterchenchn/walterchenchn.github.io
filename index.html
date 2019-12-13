@@ -229,162 +229,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/13/Windows-10%E9%85%8D%E7%BD%AEYOLO-v3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Walter Chen">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/12/13/Windows-10%E9%85%8D%E7%BD%AEYOLO-v3/" itemprop="url">Windows 10配置YOLO v3</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-13T19:12:09+08:00">
-                2019-12-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>参考：<br><a href="https://blog.csdn.net/KID_yuan/article/details/88380269" target="_blank" rel="noopener">https://blog.csdn.net/KID_yuan/article/details/88380269</a><br><a href="https://github.com/AlexeyAB/darknet" target="_blank" rel="noopener">https://github.com/AlexeyAB/darknet</a>  </p>
-<p>环境：<br>Windows 10<br>Visual Studio 2015<br>CUDA 10.1<br>CUDNN 7.5.0 for CUDA10.1<br>OpenCV 3.3.1  </p>
-<h2 id="安装Visual-Studio-2015"><a href="#安装Visual-Studio-2015" class="headerlink" title="安装Visual Studio 2015"></a>安装Visual Studio 2015</h2><p>由于本教程使用的YOLO v3源码适配Visual Studio 2015，所以建议安装Visual Studio 2015</p>
-<h3 id="下载Visual-Studio-2015安装包"><a href="#下载Visual-Studio-2015安装包" class="headerlink" title="下载Visual Studio 2015安装包"></a>下载Visual Studio 2015安装包</h3><p>Visual Studio 2015安装包来源为<a href="https://msdn.itellyou.cn" target="_blank" rel="noopener">MSDN</a>，具体为Visual Studio 2015专业版<br>Visual Studio 2015专业版激活密匙为：HMGNV-WCYXV-X7G9W-YCX63-B98R2<br>使用迅雷打开以下链接并下载：ed2k://|file|cn_visual_studio_professional_2015_with_update_3_x86_x64_dvd_8923256.iso|7745202176|DD35D3D169D553224BE5FB44E074ED5E|/</p>
-<h3 id="安装Visual-Studio-2015-1"><a href="#安装Visual-Studio-2015-1" class="headerlink" title="安装Visual Studio 2015"></a>安装Visual Studio 2015</h3><h4 id="使用“Windows资源管理器”打开Visual-Studio-2015的iso文件，然后双击打开vs-professional-exe"><a href="#使用“Windows资源管理器”打开Visual-Studio-2015的iso文件，然后双击打开vs-professional-exe" class="headerlink" title="使用“Windows资源管理器”打开Visual Studio 2015的iso文件，然后双击打开vs_professional.exe"></a>使用“Windows资源管理器”打开Visual Studio 2015的iso文件，然后双击打开vs_professional.exe</h4><p><img src="https://i.loli.net/2019/12/12/ZYvCf5IU2JeStp8.png" alt="1074181-20161203235816990-1304885083.png">  </p>
-<h4 id="更改“安装位置”，安装类型选择“默认值”，后单击“安装”"><a href="#更改“安装位置”，安装类型选择“默认值”，后单击“安装”" class="headerlink" title="更改“安装位置”，安装类型选择“默认值”，后单击“安装”"></a>更改“安装位置”，安装类型选择“默认值”，后单击“安装”</h4><p><img src="https://i.loli.net/2019/12/12/bPlkZLAFdzNC8D4.gif" alt="4-1Z314094526447.jpg">  </p>
-<h4 id="安装功能组件的页面"><a href="#安装功能组件的页面" class="headerlink" title="安装功能组件的页面"></a>安装功能组件的页面</h4><p><img src="https://i.loli.net/2019/12/12/BQqDNWYoi9Z4xRb.png" alt="1074181-20161203235902568-125842904.png">  </p>
-<h4 id="安装完成并启动"><a href="#安装完成并启动" class="headerlink" title="安装完成并启动"></a>安装完成并启动</h4><p><img src="https://i.loli.net/2019/12/12/T2WdjfrbAtcXu9K.png" alt="4-1Z314095412539.png"></p>
-<h2 id="安装CUDA-10-1"><a href="#安装CUDA-10-1" class="headerlink" title="安装CUDA 10.1"></a>安装CUDA 10.1</h2><p>YOLO v3需要使用<a href="https://developer.nvidia.com/cuda-10.1-download-archive-base?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal" target="_blank" rel="noopener">CUDA 10.1</a>  </p>
-<h3 id="下载CUDA-10-1安装包"><a href="#下载CUDA-10-1安装包" class="headerlink" title="下载CUDA 10.1安装包"></a>下载CUDA 10.1安装包</h3><p>下载CUDA 10.1的网址为：<br><a href="https://developer.nvidia.com/cuda-10.1-download-archive-base?target_os=Windows&amp;target_arch=x86_64&amp;target_version=10&amp;target_type=exelocal" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-10.1-download-archive-base?target_os=Windows&amp;target_arch=x86_64&amp;target_version=10&amp;target_type=exelocal</a><br>选择CUDA 10.1安装包选择的具体界面如下，安装包的名称为“cuda_10.1.105_418.96_win10.exe”，<br><img src="https://i.loli.net/2019/12/12/jxQ3RyUhgJ9OmGB.jpg" alt="CUDA.JPG"></p>
-<h3 id="安装CUDA-10-1-1"><a href="#安装CUDA-10-1-1" class="headerlink" title="安装CUDA 10.1"></a>安装CUDA 10.1</h3><h4 id="打开CUDA-10-1安装程序"><a href="#打开CUDA-10-1安装程序" class="headerlink" title="打开CUDA 10.1安装程序"></a>打开CUDA 10.1安装程序</h4><p>安装路径可以默认,也可以自定义。之后点击ok<br><img src="https://i.loli.net/2019/12/12/StYsMPRVWZzHb8T.jpg" alt="捕获.JPG"></p>
-<h4 id="等待安装"><a href="#等待安装" class="headerlink" title="等待安装"></a>等待安装</h4><p><img src="https://i.loli.net/2019/12/12/82feKiZGr3bJPwD.png" alt="20181012151838665.png"><br>选择“精简”安装<br><img src="https://i.loli.net/2019/12/12/kLzlxCqNoHRZ1KB.png" alt="2018101215220782.png"><br>继续等待安装完成</p>
-<h3 id="验证安装成功"><a href="#验证安装成功" class="headerlink" title="验证安装成功"></a>验证安装成功</h3><p>打开Windows的Powershell，输入“nvcc -V”，出现如下所示文字表示CUDA安装成功<br><img src="https://i.loli.net/2019/12/12/JW43x78pcf96Ca5.jpg" alt="捕获.JPG"></p>
-<h2 id="安装CUDNN-7-5-0-for-CUDA10-1"><a href="#安装CUDNN-7-5-0-for-CUDA10-1" class="headerlink" title="安装CUDNN 7.5.0 for CUDA10.1"></a>安装<a href="https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.5.0.56/prod/10.1_20190225/cudnn-10.1-windows10-x64-v7.5.0.56.zip" target="_blank" rel="noopener">CUDNN 7.5.0 for CUDA10.1</a></h2><h3 id="下载CUDNN-7-5-0-for-CUDA10-1安装包"><a href="#下载CUDNN-7-5-0-for-CUDA10-1安装包" class="headerlink" title="下载CUDNN 7.5.0 for CUDA10.1安装包"></a>下载CUDNN 7.5.0 for CUDA10.1安装包</h3><p>CUDNN 7.5.0 for CUDA10.1的下载地址如下，需要先注册一个NVIDIA的账户，<br><a href="https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.5.0.56/prod/10.1_20190225/cudnn-10.1-windows10-x64-v7.5.0.56.zip" target="_blank" rel="noopener">https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.5.0.56/prod/10.1_20190225/cudnn-10.1-windows10-x64-v7.5.0.56.zip</a></p>
-<h3 id="配置CUDNN-7-5-0-for-CUDA10-1"><a href="#配置CUDNN-7-5-0-for-CUDA10-1" class="headerlink" title="配置CUDNN 7.5.0 for CUDA10.1"></a>配置CUDNN 7.5.0 for CUDA10.1</h3><p>下载后，将下载文件解压，然后将文件夹下的“bin”，“include”，“lib”复制到“C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1”文件夹下，具体如下，<br><img src="https://pic2.superbed.cn/item/5df1ddb01f8f59f4d65a77a4.png" alt=""></p>
-<h2 id="安装OpenCV-3-3-1"><a href="#安装OpenCV-3-3-1" class="headerlink" title="安装OpenCV 3.3.1"></a>安装OpenCV 3.3.1</h2><p>YOLO v3推荐的OpenCV版本需要&lt;3.4.0同时&gt;2.4.0，所以本教程选择3.3.1版本</p>
-<h3 id="下载OpenCV-3-3-1安装包"><a href="#下载OpenCV-3-3-1安装包" class="headerlink" title="下载OpenCV 3.3.1安装包"></a>下载OpenCV 3.3.1安装包</h3><p>OpenCV 3.3.1的地址为：<a href="https://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.3.1/opencv-3.3.1-vc14.exe/download" target="_blank" rel="noopener">https://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.3.1/opencv-3.3.1-vc14.exe/download</a></p>
-<h3 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h3><p>接着只需要将OpenCV的安装包解压缩，然后配置环境变量就行了，本教程的环境变量路径如下，<br><img src="https://s2.ax1x.com/2019/12/12/Q6prFK.jpg" alt="Q6prFK.jpg"></p>
-<h2 id="编译YOLO-v3"><a href="#编译YOLO-v3" class="headerlink" title="编译YOLO v3"></a>编译YOLO v3</h2><h3 id="下载YOLO-v3源码"><a href="#下载YOLO-v3源码" class="headerlink" title="下载YOLO v3源码"></a>下载YOLO v3源码</h3><p>YOLO v3源码地址如下，可以使用git或者直接打包下载，<br><a href="https://github.com/AlexeyAB/darknet" target="_blank" rel="noopener">https://github.com/AlexeyAB/darknet</a></p>
-<h3 id="配置OpenCV的dll文件"><a href="#配置OpenCV的dll文件" class="headerlink" title="配置OpenCV的dll文件"></a>配置OpenCV的dll文件</h3><p>此时先进入“<em>darknet\build\darknet\x64</em>”文件夹下，将OpenCV3.3.1文件夹“<em>opencv\build\x64\vc14\bin</em>”中的两个dll文件：opencv_ffmpeg331_64.dll和opencv_world331.dll复制到该文件夹下，<br><img src="https://s2.ax1x.com/2019/12/12/Q6ArB4.jpg" alt="Q6ArB4.jpg"></p>
-<h3 id="修改配置文件“darknet-vcxproj”"><a href="#修改配置文件“darknet-vcxproj”" class="headerlink" title="修改配置文件“darknet.vcxproj”"></a>修改配置文件“<em>darknet.vcxproj</em>”</h3><p>进入YOLO文件夹“<em>darknet\build\darknet</em>”下，使用文本编辑器打开“<em>darknet.vcxproj</em>”，将文件中的“<em>CUDA 10.0</em>”改为“<em>CUDA 10.1</em>”，一共有两处需要修改，分别是55行和307行  </p>
-<h3 id="编译项目"><a href="#编译项目" class="headerlink" title="编译项目"></a>编译项目</h3><h4 id="打开“darknet-sln”"><a href="#打开“darknet-sln”" class="headerlink" title="打开“darknet.sln”"></a>打开“<em>darknet.sln</em>”</h4><p>使用Visual Studio打开“<em>darknet.sln</em>”文件。如果提示需要安装附加组件，那就顺着提示框进行安装。<br>同时对“<em>darknet.sln</em>”进行配置，注意上面应选为release和x64，<br><img src="https://s2.ax1x.com/2019/12/12/Q6u2ZT.jpg" alt="Q6u2ZT.jpg"></p>
-<h4 id="配置Visual-Studio中的OpenCV目录路径"><a href="#配置Visual-Studio中的OpenCV目录路径" class="headerlink" title="配置Visual Studio中的OpenCV目录路径"></a>配置Visual Studio中的OpenCV目录路径</h4><p>打开“项目-属性-VC++目录”，修改包含目录和库目录，即添加OpenCV的路径（按照自己的OpenCV的路径来进行添加），<br><img src="https://s2.ax1x.com/2019/12/12/Q6Kwm6.jpg" alt="Q6Kwm6.jpg"><br>选择“编辑”进入包含目录和库目录的编辑页，加入如下内容，<br><img src="https://s2.ax1x.com/2019/12/12/Q6KHpj.jpg" alt="Q6KHpj.jpg"><br><img src="https://s2.ax1x.com/2019/12/12/Q6Mph4.jpg" alt="Q6Mph4.jpg"></p>
-<h4 id="附加OpenCV依赖项"><a href="#附加OpenCV依赖项" class="headerlink" title="附加OpenCV依赖项"></a>附加OpenCV依赖项</h4><p>依然是在darknet属性页，做如下修改<br><img src="https://s2.ax1x.com/2019/12/12/Q6M3ut.jpg" alt="Q6M3ut.jpg"><br><img src="https://s2.ax1x.com/2019/12/12/Q6Mwgs.jpg" alt="Q6Mwgs.jpg"></p>
-<h4 id="编译项目-1"><a href="#编译项目-1" class="headerlink" title="编译项目"></a>编译项目</h4><p>这样已经完成对项目的配置，右键“darknet”重新生成就行了<br><img src="https://s2.ax1x.com/2019/12/12/Q6QadK.png" alt="Q6QadK.png"><br>如果编译一切正常，结果如下，<br><img src="https://s2.ax1x.com/2019/12/12/Q6QWo8.jpg" alt="Q6QWo8.jpg"><br>在“<em>darknet\build\darknet\x64</em>”文件夹下多出一个“<em>darknet.exe</em>”文件，就是编译得到的可执行文件，<br><img src="https://s2.ax1x.com/2019/12/12/Q6QHLq.jpg" alt="Q6QHLq.jpg">  </p>
-<h2 id="测试程序"><a href="#测试程序" class="headerlink" title="测试程序"></a>测试程序</h2><h3 id="下载权重"><a href="#下载权重" class="headerlink" title="下载权重"></a>下载权重</h3><p>在运行程序之前，还需要下载官网训练好的权重，<br><a href="https://pjreddie.com/media/files/yolov3.weights" target="_blank" rel="noopener">https://pjreddie.com/media/files/yolov3.weights</a><br>然后把权重放在“<em>darknet\x64\weights</em>”文件夹下</p>
-<h3 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h3><h4 id="检测图片"><a href="#检测图片" class="headerlink" title="检测图片"></a>检测图片</h4><p>在“<em>build\darknet\x64</em>”文件夹下，使用“shift+右键”打开Powershell，利用darknet.exe执行检测效果，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .&#x2F;darknet.exe detector test data\coco.data yolov3.cfg .\weights\yolov3.weights .\data\dog.jpg</span><br></pre></td></tr></table></figure>
-<p>结果如下，<br><img src="https://s2.ax1x.com/2019/12/12/Q63hFK.jpg" alt="Q63hFK.jpg">  </p>
-<h4 id="检测视频"><a href="#检测视频" class="headerlink" title="检测视频"></a>检测视频</h4><p>在data文件下放了一个视频文件，“.\data\TownCentre.avi”，然后执行命令，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .&#x2F;darknet.exe detector demo data\coco.data yolov3.cfg .\weights\yolov3.weights .\data\TownCentre.avi</span><br></pre></td></tr></table></figure>
-<p>使用YOLO保存检测后的视频文件时，可以用下面命令，即增加了置信阈值选项0.25，以及输出视频文件路径与名称</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .&#x2F;darknet.exe detector demo data\coco.data yolov3.cfg .\weights\yolov3.weights .\data\TownCentre.avi -thresh 0.25 -out_filename .\data\test_result.avi</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用摄像头检测目标"><a href="#使用摄像头检测目标" class="headerlink" title="使用摄像头检测目标"></a>使用摄像头检测目标</h4><p>可以使用笔记本自带的视像头检测目标，使用如下命令，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .&#x2F;darknet.exe detector demo data\coco.data yolov3.cfg .\weights\yolov3.weights</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/13/BLAM%E9%85%8D%E7%BD%AE%E5%AE%89%E8%A3%85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -416,7 +260,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-13T15:55:53+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-13T19:55:53+08:00">
                 2019-12-13
               </time>
             
@@ -567,7 +411,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-13T10:54:45+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-13T19:54:45+08:00">
                 2019-12-13
               </time>
             
@@ -643,6 +487,162 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <h2 id="删除博客"><a href="#删除博客" class="headerlink" title="删除博客"></a>删除博客</h2><p>删除在 <code>/source/_post</code> 文件夹中的文章，然后重新运行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/13/Windows-10%E9%85%8D%E7%BD%AEYOLO-v3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Walter Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/13/Windows-10%E9%85%8D%E7%BD%AEYOLO-v3/" itemprop="url">Windows 10配置YOLO v3</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-13T19:12:09+08:00">
+                2019-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>参考：<br><a href="https://blog.csdn.net/KID_yuan/article/details/88380269" target="_blank" rel="noopener">https://blog.csdn.net/KID_yuan/article/details/88380269</a><br><a href="https://github.com/AlexeyAB/darknet" target="_blank" rel="noopener">https://github.com/AlexeyAB/darknet</a>  </p>
+<p>环境：<br>Windows 10<br>Visual Studio 2015<br>CUDA 10.1<br>CUDNN 7.5.0 for CUDA10.1<br>OpenCV 3.3.1  </p>
+<h2 id="安装Visual-Studio-2015"><a href="#安装Visual-Studio-2015" class="headerlink" title="安装Visual Studio 2015"></a>安装Visual Studio 2015</h2><p>由于本教程使用的YOLO v3源码适配Visual Studio 2015，所以建议安装Visual Studio 2015</p>
+<h3 id="下载Visual-Studio-2015安装包"><a href="#下载Visual-Studio-2015安装包" class="headerlink" title="下载Visual Studio 2015安装包"></a>下载Visual Studio 2015安装包</h3><p>Visual Studio 2015安装包来源为<a href="https://msdn.itellyou.cn" target="_blank" rel="noopener">MSDN</a>，具体为Visual Studio 2015专业版<br>Visual Studio 2015专业版激活密匙为：HMGNV-WCYXV-X7G9W-YCX63-B98R2<br>使用迅雷打开以下链接并下载：ed2k://|file|cn_visual_studio_professional_2015_with_update_3_x86_x64_dvd_8923256.iso|7745202176|DD35D3D169D553224BE5FB44E074ED5E|/</p>
+<h3 id="安装Visual-Studio-2015-1"><a href="#安装Visual-Studio-2015-1" class="headerlink" title="安装Visual Studio 2015"></a>安装Visual Studio 2015</h3><h4 id="使用“Windows资源管理器”打开Visual-Studio-2015的iso文件，然后双击打开vs-professional-exe"><a href="#使用“Windows资源管理器”打开Visual-Studio-2015的iso文件，然后双击打开vs-professional-exe" class="headerlink" title="使用“Windows资源管理器”打开Visual Studio 2015的iso文件，然后双击打开vs_professional.exe"></a>使用“Windows资源管理器”打开Visual Studio 2015的iso文件，然后双击打开vs_professional.exe</h4><p><img src="https://i.loli.net/2019/12/12/ZYvCf5IU2JeStp8.png" alt="1074181-20161203235816990-1304885083.png">  </p>
+<h4 id="更改“安装位置”，安装类型选择“默认值”，后单击“安装”"><a href="#更改“安装位置”，安装类型选择“默认值”，后单击“安装”" class="headerlink" title="更改“安装位置”，安装类型选择“默认值”，后单击“安装”"></a>更改“安装位置”，安装类型选择“默认值”，后单击“安装”</h4><p><img src="https://i.loli.net/2019/12/12/bPlkZLAFdzNC8D4.gif" alt="4-1Z314094526447.jpg">  </p>
+<h4 id="安装功能组件的页面"><a href="#安装功能组件的页面" class="headerlink" title="安装功能组件的页面"></a>安装功能组件的页面</h4><p><img src="https://i.loli.net/2019/12/12/BQqDNWYoi9Z4xRb.png" alt="1074181-20161203235902568-125842904.png">  </p>
+<h4 id="安装完成并启动"><a href="#安装完成并启动" class="headerlink" title="安装完成并启动"></a>安装完成并启动</h4><p><img src="https://i.loli.net/2019/12/12/T2WdjfrbAtcXu9K.png" alt="4-1Z314095412539.png"></p>
+<h2 id="安装CUDA-10-1"><a href="#安装CUDA-10-1" class="headerlink" title="安装CUDA 10.1"></a>安装CUDA 10.1</h2><p>YOLO v3需要使用<a href="https://developer.nvidia.com/cuda-10.1-download-archive-base?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal" target="_blank" rel="noopener">CUDA 10.1</a>  </p>
+<h3 id="下载CUDA-10-1安装包"><a href="#下载CUDA-10-1安装包" class="headerlink" title="下载CUDA 10.1安装包"></a>下载CUDA 10.1安装包</h3><p>下载CUDA 10.1的网址为：<br><a href="https://developer.nvidia.com/cuda-10.1-download-archive-base?target_os=Windows&amp;target_arch=x86_64&amp;target_version=10&amp;target_type=exelocal" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-10.1-download-archive-base?target_os=Windows&amp;target_arch=x86_64&amp;target_version=10&amp;target_type=exelocal</a><br>选择CUDA 10.1安装包选择的具体界面如下，安装包的名称为“cuda_10.1.105_418.96_win10.exe”，<br><img src="https://i.loli.net/2019/12/12/jxQ3RyUhgJ9OmGB.jpg" alt="CUDA.JPG"></p>
+<h3 id="安装CUDA-10-1-1"><a href="#安装CUDA-10-1-1" class="headerlink" title="安装CUDA 10.1"></a>安装CUDA 10.1</h3><h4 id="打开CUDA-10-1安装程序"><a href="#打开CUDA-10-1安装程序" class="headerlink" title="打开CUDA 10.1安装程序"></a>打开CUDA 10.1安装程序</h4><p>安装路径可以默认,也可以自定义。之后点击ok<br><img src="https://i.loli.net/2019/12/12/StYsMPRVWZzHb8T.jpg" alt="捕获.JPG"></p>
+<h4 id="等待安装"><a href="#等待安装" class="headerlink" title="等待安装"></a>等待安装</h4><p><img src="https://i.loli.net/2019/12/12/82feKiZGr3bJPwD.png" alt="20181012151838665.png"><br>选择“精简”安装<br><img src="https://i.loli.net/2019/12/12/kLzlxCqNoHRZ1KB.png" alt="2018101215220782.png"><br>继续等待安装完成</p>
+<h3 id="验证安装成功"><a href="#验证安装成功" class="headerlink" title="验证安装成功"></a>验证安装成功</h3><p>打开Windows的Powershell，输入“nvcc -V”，出现如下所示文字表示CUDA安装成功<br><img src="https://i.loli.net/2019/12/12/JW43x78pcf96Ca5.jpg" alt="捕获.JPG"></p>
+<h2 id="安装CUDNN-7-5-0-for-CUDA10-1"><a href="#安装CUDNN-7-5-0-for-CUDA10-1" class="headerlink" title="安装CUDNN 7.5.0 for CUDA10.1"></a>安装<a href="https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.5.0.56/prod/10.1_20190225/cudnn-10.1-windows10-x64-v7.5.0.56.zip" target="_blank" rel="noopener">CUDNN 7.5.0 for CUDA10.1</a></h2><h3 id="下载CUDNN-7-5-0-for-CUDA10-1安装包"><a href="#下载CUDNN-7-5-0-for-CUDA10-1安装包" class="headerlink" title="下载CUDNN 7.5.0 for CUDA10.1安装包"></a>下载CUDNN 7.5.0 for CUDA10.1安装包</h3><p>CUDNN 7.5.0 for CUDA10.1的下载地址如下，需要先注册一个NVIDIA的账户，<br><a href="https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.5.0.56/prod/10.1_20190225/cudnn-10.1-windows10-x64-v7.5.0.56.zip" target="_blank" rel="noopener">https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.5.0.56/prod/10.1_20190225/cudnn-10.1-windows10-x64-v7.5.0.56.zip</a></p>
+<h3 id="配置CUDNN-7-5-0-for-CUDA10-1"><a href="#配置CUDNN-7-5-0-for-CUDA10-1" class="headerlink" title="配置CUDNN 7.5.0 for CUDA10.1"></a>配置CUDNN 7.5.0 for CUDA10.1</h3><p>下载后，将下载文件解压，然后将文件夹下的“bin”，“include”，“lib”复制到“C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1”文件夹下，具体如下，<br><img src="https://pic2.superbed.cn/item/5df1ddb01f8f59f4d65a77a4.png" alt=""></p>
+<h2 id="安装OpenCV-3-3-1"><a href="#安装OpenCV-3-3-1" class="headerlink" title="安装OpenCV 3.3.1"></a>安装OpenCV 3.3.1</h2><p>YOLO v3推荐的OpenCV版本需要&lt;3.4.0同时&gt;2.4.0，所以本教程选择3.3.1版本</p>
+<h3 id="下载OpenCV-3-3-1安装包"><a href="#下载OpenCV-3-3-1安装包" class="headerlink" title="下载OpenCV 3.3.1安装包"></a>下载OpenCV 3.3.1安装包</h3><p>OpenCV 3.3.1的地址为：<a href="https://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.3.1/opencv-3.3.1-vc14.exe/download" target="_blank" rel="noopener">https://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.3.1/opencv-3.3.1-vc14.exe/download</a></p>
+<h3 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h3><p>接着只需要将OpenCV的安装包解压缩，然后配置环境变量就行了，本教程的环境变量路径如下，<br><img src="https://s2.ax1x.com/2019/12/12/Q6prFK.jpg" alt="Q6prFK.jpg"></p>
+<h2 id="编译YOLO-v3"><a href="#编译YOLO-v3" class="headerlink" title="编译YOLO v3"></a>编译YOLO v3</h2><h3 id="下载YOLO-v3源码"><a href="#下载YOLO-v3源码" class="headerlink" title="下载YOLO v3源码"></a>下载YOLO v3源码</h3><p>YOLO v3源码地址如下，可以使用git或者直接打包下载，<br><a href="https://github.com/AlexeyAB/darknet" target="_blank" rel="noopener">https://github.com/AlexeyAB/darknet</a></p>
+<h3 id="配置OpenCV的dll文件"><a href="#配置OpenCV的dll文件" class="headerlink" title="配置OpenCV的dll文件"></a>配置OpenCV的dll文件</h3><p>此时先进入“<em>darknet\build\darknet\x64</em>”文件夹下，将OpenCV3.3.1文件夹“<em>opencv\build\x64\vc14\bin</em>”中的两个dll文件：opencv_ffmpeg331_64.dll和opencv_world331.dll复制到该文件夹下，<br><img src="https://s2.ax1x.com/2019/12/12/Q6ArB4.jpg" alt="Q6ArB4.jpg"></p>
+<h3 id="修改配置文件“darknet-vcxproj”"><a href="#修改配置文件“darknet-vcxproj”" class="headerlink" title="修改配置文件“darknet.vcxproj”"></a>修改配置文件“<em>darknet.vcxproj</em>”</h3><p>进入YOLO文件夹“<em>darknet\build\darknet</em>”下，使用文本编辑器打开“<em>darknet.vcxproj</em>”，将文件中的“<em>CUDA 10.0</em>”改为“<em>CUDA 10.1</em>”，一共有两处需要修改，分别是55行和307行  </p>
+<h3 id="编译项目"><a href="#编译项目" class="headerlink" title="编译项目"></a>编译项目</h3><h4 id="打开“darknet-sln”"><a href="#打开“darknet-sln”" class="headerlink" title="打开“darknet.sln”"></a>打开“<em>darknet.sln</em>”</h4><p>使用Visual Studio打开“<em>darknet.sln</em>”文件。如果提示需要安装附加组件，那就顺着提示框进行安装。<br>同时对“<em>darknet.sln</em>”进行配置，注意上面应选为release和x64，<br><img src="https://s2.ax1x.com/2019/12/12/Q6u2ZT.jpg" alt="Q6u2ZT.jpg"></p>
+<h4 id="配置Visual-Studio中的OpenCV目录路径"><a href="#配置Visual-Studio中的OpenCV目录路径" class="headerlink" title="配置Visual Studio中的OpenCV目录路径"></a>配置Visual Studio中的OpenCV目录路径</h4><p>打开“项目-属性-VC++目录”，修改包含目录和库目录，即添加OpenCV的路径（按照自己的OpenCV的路径来进行添加），<br><img src="https://s2.ax1x.com/2019/12/12/Q6Kwm6.jpg" alt="Q6Kwm6.jpg"><br>选择“编辑”进入包含目录和库目录的编辑页，加入如下内容，<br><img src="https://s2.ax1x.com/2019/12/12/Q6KHpj.jpg" alt="Q6KHpj.jpg"><br><img src="https://s2.ax1x.com/2019/12/12/Q6Mph4.jpg" alt="Q6Mph4.jpg"></p>
+<h4 id="附加OpenCV依赖项"><a href="#附加OpenCV依赖项" class="headerlink" title="附加OpenCV依赖项"></a>附加OpenCV依赖项</h4><p>依然是在darknet属性页，做如下修改<br><img src="https://s2.ax1x.com/2019/12/12/Q6M3ut.jpg" alt="Q6M3ut.jpg"><br><img src="https://s2.ax1x.com/2019/12/12/Q6Mwgs.jpg" alt="Q6Mwgs.jpg"></p>
+<h4 id="编译项目-1"><a href="#编译项目-1" class="headerlink" title="编译项目"></a>编译项目</h4><p>这样已经完成对项目的配置，右键“darknet”重新生成就行了<br><img src="https://s2.ax1x.com/2019/12/12/Q6QadK.png" alt="Q6QadK.png"><br>如果编译一切正常，结果如下，<br><img src="https://s2.ax1x.com/2019/12/12/Q6QWo8.jpg" alt="Q6QWo8.jpg"><br>在“<em>darknet\build\darknet\x64</em>”文件夹下多出一个“<em>darknet.exe</em>”文件，就是编译得到的可执行文件，<br><img src="https://s2.ax1x.com/2019/12/12/Q6QHLq.jpg" alt="Q6QHLq.jpg">  </p>
+<h2 id="测试程序"><a href="#测试程序" class="headerlink" title="测试程序"></a>测试程序</h2><h3 id="下载权重"><a href="#下载权重" class="headerlink" title="下载权重"></a>下载权重</h3><p>在运行程序之前，还需要下载官网训练好的权重，<br><a href="https://pjreddie.com/media/files/yolov3.weights" target="_blank" rel="noopener">https://pjreddie.com/media/files/yolov3.weights</a><br>然后把权重放在“<em>darknet\x64\weights</em>”文件夹下</p>
+<h3 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h3><h4 id="检测图片"><a href="#检测图片" class="headerlink" title="检测图片"></a>检测图片</h4><p>在“<em>build\darknet\x64</em>”文件夹下，使用“shift+右键”打开Powershell，利用darknet.exe执行检测效果，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .&#x2F;darknet.exe detector test data\coco.data yolov3.cfg .\weights\yolov3.weights .\data\dog.jpg</span><br></pre></td></tr></table></figure>
+<p>结果如下，<br><img src="https://s2.ax1x.com/2019/12/12/Q63hFK.jpg" alt="Q63hFK.jpg">  </p>
+<h4 id="检测视频"><a href="#检测视频" class="headerlink" title="检测视频"></a>检测视频</h4><p>在data文件下放了一个视频文件，“.\data\TownCentre.avi”，然后执行命令，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .&#x2F;darknet.exe detector demo data\coco.data yolov3.cfg .\weights\yolov3.weights .\data\TownCentre.avi</span><br></pre></td></tr></table></figure>
+<p>使用YOLO保存检测后的视频文件时，可以用下面命令，即增加了置信阈值选项0.25，以及输出视频文件路径与名称</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .&#x2F;darknet.exe detector demo data\coco.data yolov3.cfg .\weights\yolov3.weights .\data\TownCentre.avi -thresh 0.25 -out_filename .\data\test_result.avi</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用摄像头检测目标"><a href="#使用摄像头检测目标" class="headerlink" title="使用摄像头检测目标"></a>使用摄像头检测目标</h4><p>可以使用笔记本自带的视像头检测目标，使用如下命令，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .&#x2F;darknet.exe detector demo data\coco.data yolov3.cfg .\weights\yolov3.weights</span><br></pre></td></tr></table></figure>
+
+
           
         
       
