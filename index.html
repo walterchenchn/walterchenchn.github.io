@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="en">
+<html class="theme-next pisces use-motion" lang="en">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -84,7 +84,7 @@
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Walter Chen">
 <meta name="twitter:card" content="summary">
 
 
@@ -93,7 +93,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -229,10 +229,10 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/13/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/13/BLAM%E9%85%8D%E7%BD%AE%E5%AE%89%E8%A3%85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Walter Chen">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/12/13/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2019/12/13/BLAM%E9%85%8D%E7%BD%AE%E5%AE%89%E8%A3%85/" itemprop="url">BLAM配置安装</a></h1>
         
 
         <div class="post-meta">
@@ -260,7 +260,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-13T09:44:24+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-13T19:55:53+08:00">
                 2019-12-13
               </time>
             
@@ -300,19 +300,38 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+            <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>Github: <a href="https://github.com/erik-nelson/blam" target="_blank" rel="noopener">https://github.com/erik-nelson/blam</a><br>官方视频: <a href="https://youtu.be/08GTGfNneCI" target="_blank" rel="noopener">https://youtu.be/08GTGfNneCI</a></p>
+<h2 id="环境依赖"><a href="#环境依赖" class="headerlink" title="环境依赖"></a>环境依赖</h2><p>Ubuntu16.04<br>ROS kinetic</p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>BLAM(Berkeley Localization And Mapping)是一个开源的3D激光SLAM框架,对于不同类型的激光传感器适配性较强,而且建图以及回环检测效果较好.<br><a href="https://i.loli.net/2019/04/02/5ca3091f0ad91.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/04/02/5ca3091f0ad91.png" alt="blam_mosaic.png"></a></p>
+<h2 id="安装GTSAM依赖包"><a href="#安装GTSAM依赖包" class="headerlink" title="安装GTSAM依赖包"></a>安装GTSAM依赖包</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install libboost-all-dev</span><br><span class="line">$ sudo apt-get install cmake</span><br><span class="line">$ git <span class="built_in">clone</span> https://bitbucket.org/gtborg/gtsam.git</span><br><span class="line">$ <span class="built_in">cd</span> gtsam</span><br><span class="line">$ mkdir build</span><br><span class="line">$ <span class="built_in">cd</span> build</span><br><span class="line">$ cmake ..</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="安装BLAM"><a href="#安装BLAM" class="headerlink" title="安装BLAM"></a>安装BLAM</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/erik-nelson/blam.git</span><br></pre></td></tr></table></figure>
+<p>确保 <code>ROS_PACKAGE_PATH</code> 中没有任何其他ROS工作区</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blam</span><br><span class="line">$ ./update</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="fatal-error-ros-ros-h-No-such-file-or-directory"><a href="#fatal-error-ros-ros-h-No-such-file-or-directory" class="headerlink" title="fatal error: ros/ros.h: No such file or directory"></a>fatal error: ros/ros.h: No such file or directory</h3><p>在 <code>blam/internal/src/geometry_utils</code> 文件夹下,加入如下两行到 <code>package.xml</code></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build_depend</span>&gt;</span>roscpp<span class="tag">&lt;/<span class="name">build_depend</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">run_depend</span>&gt;</span>roscpp<span class="tag">&lt;/<span class="name">run_depend</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>添加以下下两行到CMakeList.txt</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find_package(catkin REQUIRED COMPONENTS roscpp)</span><br><span class="line">include_directories(include $&#123;catkin_INCLUDE_DIRS&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><h3 id="使用官方的velodyne的数据包"><a href="#使用官方的velodyne的数据包" class="headerlink" title="使用官方的velodyne的数据包"></a>使用官方的velodyne的数据包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ rosbag play velodyne.bag</span><br><span class="line">$ source ~&#x2F;internal&#x2F;devel&#x2F;setup.bash</span><br><span class="line">$ roslaunch blam_example test_online.launch</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h3 id="使用自己的激光雷达传感器"><a href="#使用自己的激光雷达传感器" class="headerlink" title="使用自己的激光雷达传感器"></a>使用自己的激光雷达传感器</h3><p>需要修改 <code>test_online.launch</code> 文件,将 <code>/velodyne_points</code> 修改成自己的激光雷达传感器的topic的名字,如下我使用的是速腾聚创rslidar-16激光雷达,修改如下所示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;remap from&#x3D;&quot;~pcld&quot; to&#x3D;&quot;&#x2F;rslidar_points&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+<p>实验室还有一个镭神lslidar-c32激光雷达,所以修改成如下所示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;remap from&#x3D;&quot;~pcld&quot; to&#x3D;&quot;&#x2F;point_raw&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用自定义数据集常见问题"><a href="#使用自定义数据集常见问题" class="headerlink" title="使用自定义数据集常见问题"></a>使用自定义数据集常见问题</h2><h3 id="效果不好"><a href="#效果不好" class="headerlink" title="效果不好"></a>效果不好</h3><p>注意查看自己的点云数据量和velodyne的区别，如果点云数量较少就修改 <code>point_cloud_filter/config/parameters.yaml</code>,将滤波关闭,如下所示</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">grid_filter:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="建图效果不好，旋转较大"><a href="#建图效果不好，旋转较大" class="headerlink" title="建图效果不好，旋转较大"></a>建图效果不好，旋转较大</h3><p>修改文件 <code>point_cloud_localization/config/parameters.yaml</code></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Maximum acceptable incremental rotation and translation.</span></span><br><span class="line"><span class="attr">transform_thresholding:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">max_translation:</span> <span class="number">0.5</span> </span><br><span class="line"><span class="attr">max_rotation:</span> <span class="number">0.3</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="没有回环"><a href="#没有回环" class="headerlink" title="没有回环"></a>没有回环</h3><p>观察你的pose相差多远，修改 <code>laser_loop_closure/config/parameters.yaml</code> </p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#默认0.5米检测一次回环或记录关键帧，值越大效率越高，发现构图缓慢的时候可以放大这个值</span></span><br><span class="line"><span class="attr">translation_threshold:</span> <span class="number">1.0</span> <span class="comment">#0.5</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#默认是在1.5米范围内匹配，根据你自己的回环误差放大这个值</span></span><br><span class="line"><span class="attr">proximity_threshold:</span> <span class="number">10</span> <span class="comment">#1.5</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#ICP "fitness score" must be less than this number，就是越小越难回环</span></span><br><span class="line"><span class="attr">max_tolerable_fitness:</span> <span class="number">5</span> <span class="comment">#0.15</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#根据你自己的地图大小适当放宽跳过回环的点数，一般地图越大值越大</span></span><br><span class="line"><span class="attr">skip_recent_poses:</span> <span class="number">100</span> <span class="comment">#40</span></span><br><span class="line"><span class="attr">poses_before_reclosing:</span> <span class="number">100</span> <span class="comment">#40</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="位姿回环但点云没有修正"><a href="#位姿回环但点云没有修正" class="headerlink" title="位姿回环但点云没有修正"></a>位姿回环但点云没有修正</h3><p>取消订阅 <code>/blam/blam_slam/octree_map_updates</code>,再重新订阅就看到了</p>
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p>首次构图,还未回环,几乎无偏差<br><a href="https://i.loli.net/2019/04/02/5ca3096ac4695.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/04/02/5ca3096ac4695.png" alt="190321.png"></a></p>
 
           
         
@@ -361,10 +380,10 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/12/Windows%2010%E9%85%8D%E7%BD%AEYOLO%20v3/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/13/%E6%90%AD%E5%BB%BAGithub%E5%8D%9A%E5%AE%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Walter Chen">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -380,7 +399,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/12/12/Windows%2010%E9%85%8D%E7%BD%AEYOLO%20v3/" itemprop="url">Windows 10配置YOLO v3</a></h1>
+                <a class="post-title-link" href="/2019/12/13/%E6%90%AD%E5%BB%BAGithub%E5%8D%9A%E5%AE%A2/" itemprop="url">搭建Github博客</a></h1>
         
 
         <div class="post-meta">
@@ -392,8 +411,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-12T09:13:17+08:00">
-                2019-12-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-13T19:54:45+08:00">
+                2019-12-13
               </time>
             
 
@@ -432,37 +451,195 @@
       
         
           
-            <h1 id="Windows-10配置YOLO-v3"><a href="#Windows-10配置YOLO-v3" class="headerlink" title="Windows 10配置YOLO v3"></a>Windows 10配置YOLO v3</h1><h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><p><a href="https://blog.csdn.net/KID_yuan/article/details/88380269" target="_blank" rel="noopener">https://blog.csdn.net/KID_yuan/article/details/88380269</a><br><a href="https://github.com/AlexeyAB/darknet" target="_blank" rel="noopener">https://github.com/AlexeyAB/darknet</a>  </p>
-<h2 id="环境："><a href="#环境：" class="headerlink" title="环境："></a>环境：</h2><p>Windows 10<br>Visual Studio 2015<br>CUDA 10.1<br>CUDNN 7.5.0 for CUDA10.1<br>OpenCV 3.3.1  </p>
-<h2 id="1-安装Visual-Studio-2015"><a href="#1-安装Visual-Studio-2015" class="headerlink" title="1. 安装Visual Studio 2015"></a>1. 安装Visual Studio 2015</h2><p>由于本教程使用的YOLO v3源码适配Visual Studio 2015，所以建议安装Visual Studio 2015</p>
-<h3 id="1-1-下载Visual-Studio-2015安装包"><a href="#1-1-下载Visual-Studio-2015安装包" class="headerlink" title="1.1 下载Visual Studio 2015安装包"></a>1.1 下载Visual Studio 2015安装包</h3><p>Visual Studio 2015安装包来源为<a href="https://msdn.itellyou.cn" target="_blank" rel="noopener">MSDN</a>，具体为Visual Studio 2015专业版<br>Visual Studio 2015专业版激活密匙为：HMGNV-WCYXV-X7G9W-YCX63-B98R2<br>使用迅雷打开以下链接并下载：ed2k://|file|cn_visual_studio_professional_2015_with_update_3_x86_x64_dvd_8923256.iso|7745202176|DD35D3D169D553224BE5FB44E074ED5E|/</p>
-<h3 id="1-2-安装Visual-Studio-2015"><a href="#1-2-安装Visual-Studio-2015" class="headerlink" title="1.2 安装Visual Studio 2015"></a>1.2 安装Visual Studio 2015</h3><p>1.2.1 使用“Windows资源管理器”打开Visual Studio 2015的iso文件，然后双击打开vs_professional.exe<br><img src="https://i.loli.net/2019/12/12/ZYvCf5IU2JeStp8.png" alt="1074181-20161203235816990-1304885083.png"><br>1.2.2 更改“安装位置”，安装类型选择“默认值”，后单击“安装”<br><img src="https://i.loli.net/2019/12/12/bPlkZLAFdzNC8D4.gif" alt="4-1Z314094526447.jpg"><br>1.2.3 安装功能组件的页面<br><img src="https://i.loli.net/2019/12/12/BQqDNWYoi9Z4xRb.png" alt="1074181-20161203235902568-125842904.png"><br>1.2.4 安装完成并启动<br><img src="https://i.loli.net/2019/12/12/T2WdjfrbAtcXu9K.png" alt="4-1Z314095412539.png"></p>
-<h2 id="2-安装CUDA-10-1"><a href="#2-安装CUDA-10-1" class="headerlink" title="2. 安装CUDA 10.1"></a>2. 安装CUDA 10.1</h2><p>YOLO v3需要使用<a href="https://developer.nvidia.com/cuda-10.1-download-archive-base?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal" target="_blank" rel="noopener">CUDA 10.1</a>  </p>
-<h3 id="2-1-下载CUDA-10-1安装包"><a href="#2-1-下载CUDA-10-1安装包" class="headerlink" title="2.1 下载CUDA 10.1安装包"></a>2.1 下载CUDA 10.1安装包</h3><p>下载CUDA 10.1的网址为：<br><a href="https://developer.nvidia.com/cuda-10.1-download-archive-base?target_os=Windows&amp;target_arch=x86_64&amp;target_version=10&amp;target_type=exelocal" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-10.1-download-archive-base?target_os=Windows&amp;target_arch=x86_64&amp;target_version=10&amp;target_type=exelocal</a><br>选择CUDA 10.1安装包选择的具体界面如下，安装包的名称为“cuda_10.1.105_418.96_win10.exe”，<br><img src="https://i.loli.net/2019/12/12/jxQ3RyUhgJ9OmGB.jpg" alt="CUDA.JPG"></p>
-<h3 id="2-2-安装CUDA-10-1"><a href="#2-2-安装CUDA-10-1" class="headerlink" title="2.2 安装CUDA 10.1"></a>2.2 安装CUDA 10.1</h3><h4 id="2-2-1-打开CUDA-10-1安装程序"><a href="#2-2-1-打开CUDA-10-1安装程序" class="headerlink" title="2.2.1 打开CUDA 10.1安装程序"></a>2.2.1 打开CUDA 10.1安装程序</h4><p>安装路径可以默认,也可以自定义。之后点击ok<br><img src="https://i.loli.net/2019/12/12/StYsMPRVWZzHb8T.jpg" alt="捕获.JPG"></p>
-<h4 id="2-2-2-等待安装"><a href="#2-2-2-等待安装" class="headerlink" title="2.2.2 等待安装"></a>2.2.2 等待安装</h4><p><img src="https://i.loli.net/2019/12/12/82feKiZGr3bJPwD.png" alt="20181012151838665.png"><br>选择“精简”安装<br><img src="https://i.loli.net/2019/12/12/kLzlxCqNoHRZ1KB.png" alt="2018101215220782.png"><br>继续等待安装完成</p>
-<h3 id="2-3-验证安装成功"><a href="#2-3-验证安装成功" class="headerlink" title="2.3 验证安装成功"></a>2.3 验证安装成功</h3><p>打开Windows的Powershell，输入“nvcc -V”，出现如下所示文字表示CUDA安装成功<br><img src="https://i.loli.net/2019/12/12/JW43x78pcf96Ca5.jpg" alt="捕获.JPG"></p>
-<h2 id="3-安装CUDNN-7-5-0-for-CUDA10-1"><a href="#3-安装CUDNN-7-5-0-for-CUDA10-1" class="headerlink" title="3. 安装CUDNN 7.5.0 for CUDA10.1"></a>3. 安装<a href="https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.5.0.56/prod/10.1_20190225/cudnn-10.1-windows10-x64-v7.5.0.56.zip" target="_blank" rel="noopener">CUDNN 7.5.0 for CUDA10.1</a></h2><h3 id="3-1-下载CUDNN-7-5-0-for-CUDA10-1安装包"><a href="#3-1-下载CUDNN-7-5-0-for-CUDA10-1安装包" class="headerlink" title="3.1 下载CUDNN 7.5.0 for CUDA10.1安装包"></a>3.1 下载CUDNN 7.5.0 for CUDA10.1安装包</h3><p>CUDNN 7.5.0 for CUDA10.1的下载地址如下，需要先注册一个NVIDIA的账户，<br><a href="https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.5.0.56/prod/10.1_20190225/cudnn-10.1-windows10-x64-v7.5.0.56.zip" target="_blank" rel="noopener">https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.5.0.56/prod/10.1_20190225/cudnn-10.1-windows10-x64-v7.5.0.56.zip</a></p>
-<h3 id="3-2-配置CUDNN-7-5-0-for-CUDA10-1"><a href="#3-2-配置CUDNN-7-5-0-for-CUDA10-1" class="headerlink" title="3.2 配置CUDNN 7.5.0 for CUDA10.1"></a>3.2 配置CUDNN 7.5.0 for CUDA10.1</h3><p>下载后，将下载文件解压，然后将文件夹下的“bin”，“include”，“lib”复制到“C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1”文件夹下，具体如下，<br><img src="https://pic2.superbed.cn/item/5df1ddb01f8f59f4d65a77a4.png" alt=""></p>
-<h2 id="4-安装OpenCV-3-3-1"><a href="#4-安装OpenCV-3-3-1" class="headerlink" title="4. 安装OpenCV 3.3.1"></a>4. 安装OpenCV 3.3.1</h2><p>YOLO v3推荐的OpenCV版本需要&lt;3.4.0同时&gt;2.4.0，所以本教程选择3.3.1版本</p>
-<h3 id="4-1-下载OpenCV-3-3-1安装包"><a href="#4-1-下载OpenCV-3-3-1安装包" class="headerlink" title="4.1 下载OpenCV 3.3.1安装包"></a>4.1 下载OpenCV 3.3.1安装包</h3><p>OpenCV 3.3.1的地址为：<a href="https://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.3.1/opencv-3.3.1-vc14.exe/download" target="_blank" rel="noopener">https://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.3.1/opencv-3.3.1-vc14.exe/download</a></p>
-<h3 id="4-2-安装与配置"><a href="#4-2-安装与配置" class="headerlink" title="4.2 安装与配置"></a>4.2 安装与配置</h3><p>接着只需要将OpenCV的安装包解压缩，然后配置环境变量就行了，本教程的环境变量路径如下，<br><img src="https://s2.ax1x.com/2019/12/12/Q6prFK.jpg" alt="Q6prFK.jpg"></p>
-<h2 id="5-编译YOLO-v3"><a href="#5-编译YOLO-v3" class="headerlink" title="5. 编译YOLO v3"></a>5. 编译YOLO v3</h2><h3 id="5-1-下载YOLO-v3源码"><a href="#5-1-下载YOLO-v3源码" class="headerlink" title="5.1 下载YOLO v3源码"></a>5.1 下载YOLO v3源码</h3><p>YOLO v3源码地址如下，可以使用git或者直接打包下载，<br><a href="https://github.com/AlexeyAB/darknet" target="_blank" rel="noopener">https://github.com/AlexeyAB/darknet</a></p>
-<h3 id="5-2-配置OpenCV的dll文件"><a href="#5-2-配置OpenCV的dll文件" class="headerlink" title="5.2 配置OpenCV的dll文件"></a>5.2 配置OpenCV的dll文件</h3><p>此时先进入“<em>darknet\build\darknet\x64</em>”文件夹下，将OpenCV3.3.1文件夹“<em>opencv\build\x64\vc14\bin</em>”中的两个dll文件：opencv_ffmpeg331_64.dll和opencv_world331.dll复制到该文件夹下，<br><img src="https://s2.ax1x.com/2019/12/12/Q6ArB4.jpg" alt="Q6ArB4.jpg"></p>
-<h3 id="5-3-修改配置文件“darknet-vcxproj”"><a href="#5-3-修改配置文件“darknet-vcxproj”" class="headerlink" title="5.3 修改配置文件“darknet.vcxproj”"></a>5.3 修改配置文件“<em>darknet.vcxproj</em>”</h3><p>进入YOLO文件夹“<em>darknet\build\darknet</em>”下，使用文本编辑器打开“<em>darknet.vcxproj</em>”，将文件中的“<em>CUDA 10.0</em>”改为“<em>CUDA 10.1</em>”，一共有两处需要修改，分别是55行和307行  </p>
-<h3 id="5-4-编译项目"><a href="#5-4-编译项目" class="headerlink" title="5.4 编译项目"></a>5.4 编译项目</h3><h4 id="5-4-1-打开“darknet-sln”"><a href="#5-4-1-打开“darknet-sln”" class="headerlink" title="5.4.1 打开“darknet.sln”"></a>5.4.1 打开“<em>darknet.sln</em>”</h4><p>使用Visual Studio打开“<em>darknet.sln</em>”文件。如果提示需要安装附加组件，那就顺着提示框进行安装。<br>同时对“<em>darknet.sln</em>”进行配置，注意上面应选为release和x64，<br><img src="https://s2.ax1x.com/2019/12/12/Q6u2ZT.jpg" alt="Q6u2ZT.jpg"></p>
-<h4 id="5-4-2-配置Visual-Studio中的OpenCV目录路径"><a href="#5-4-2-配置Visual-Studio中的OpenCV目录路径" class="headerlink" title="5.4.2 配置Visual Studio中的OpenCV目录路径"></a>5.4.2 配置Visual Studio中的OpenCV目录路径</h4><p>打开“项目-属性-VC++目录”，修改包含目录和库目录，即添加OpenCV的路径（按照自己的OpenCV的路径来进行添加），<br><img src="https://s2.ax1x.com/2019/12/12/Q6Kwm6.jpg" alt="Q6Kwm6.jpg"><br>选择“编辑”进入包含目录和库目录的编辑页，加入如下内容，<br><img src="https://s2.ax1x.com/2019/12/12/Q6KHpj.jpg" alt="Q6KHpj.jpg"><br><img src="https://s2.ax1x.com/2019/12/12/Q6Mph4.jpg" alt="Q6Mph4.jpg"></p>
-<h4 id="5-4-3-附加OpenCV依赖项"><a href="#5-4-3-附加OpenCV依赖项" class="headerlink" title="5.4.3 附加OpenCV依赖项"></a>5.4.3 附加OpenCV依赖项</h4><p>依然是在darknet属性页，做如下修改<br><img src="https://s2.ax1x.com/2019/12/12/Q6M3ut.jpg" alt="Q6M3ut.jpg"><br><img src="https://s2.ax1x.com/2019/12/12/Q6Mwgs.jpg" alt="Q6Mwgs.jpg"></p>
-<h4 id="5-4-4-编译项目"><a href="#5-4-4-编译项目" class="headerlink" title="5.4.4 编译项目"></a>5.4.4 编译项目</h4><p>这样已经完成对项目的配置，右键“darknet”重新生成就行了<br><img src="https://s2.ax1x.com/2019/12/12/Q6QadK.png" alt="Q6QadK.png"><br>如果编译一切正常，结果如下，<br><img src="https://s2.ax1x.com/2019/12/12/Q6QWo8.jpg" alt="Q6QWo8.jpg"><br>在“<em>darknet\build\darknet\x64</em>”文件夹下多出一个“<em>darknet.exe</em>”文件，就是编译得到的可执行文件，<br><img src="https://s2.ax1x.com/2019/12/12/Q6QHLq.jpg" alt="Q6QHLq.jpg">  </p>
-<h2 id="6-测试程序"><a href="#6-测试程序" class="headerlink" title="6 测试程序"></a>6 测试程序</h2><h3 id="6-1-下载权重"><a href="#6-1-下载权重" class="headerlink" title="6.1 下载权重"></a>6.1 下载权重</h3><p>在运行程序之前，还需要下载官网训练好的权重，<br><a href="https://pjreddie.com/media/files/yolov3.weights" target="_blank" rel="noopener">https://pjreddie.com/media/files/yolov3.weights</a><br>然后把权重放在“<em>darknet\x64\weights</em>”文件夹下</p>
-<h3 id="6-2-运行程序"><a href="#6-2-运行程序" class="headerlink" title="6.2 运行程序"></a>6.2 运行程序</h3><h4 id="6-2-1-检测图片"><a href="#6-2-1-检测图片" class="headerlink" title="6.2.1 检测图片"></a>6.2.1 检测图片</h4><p>在“<em>build\darknet\x64</em>”文件夹下，使用“shift+右键”打开Powershell，利用darknet.exe执行检测效果，</p>
+            <p>环境:Ubuntu16.04</p>
+<h2 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h2><p>Hexo是一款基于Node.js的静态博客框架,可以方便地生成静态网页托管在GitHub上,是搭建博客的首选框架.可以进入<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo官网</a>了解详情.</p>
+<h2 id="Hexo搭建"><a href="#Hexo搭建" class="headerlink" title="Hexo搭建"></a>Hexo搭建</h2><h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install git-core</span><br></pre></td></tr></table></figure>
+<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>Hexo基于Node.js,可以查阅<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js官网</a>安装.下面介绍基于nvm的Node.js安装方式.</p>
+<h4 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装nvm</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install build-essential libssl-dev</span><br><span class="line">$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash</span><br></pre></td></tr></table></figure>
+<p>可以使用 <code>nvm --help</code> 查看nvm是否安装成功.然后重启终端执行以下命令,完成Node.js的安装.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install stable</span><br></pre></td></tr></table></figure>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h4 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>folder是文件夹名,可任意取名,默认是hexo.</p>
+<h4 id="生成静态页面并启动服务器"><a href="#生成静态页面并启动服务器" class="headerlink" title="生成静态页面并启动服务器"></a>生成静态页面并启动服务器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>hexo命令是在你建立的博客文件目录下执行，然后就可以用浏览器打开网址： <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 来进行预览了。</p>
+<h2 id="GitHub账号"><a href="#GitHub账号" class="headerlink" title="GitHub账号"></a>GitHub账号</h2><p>注册GitHub账号,并新建一个仓库,注意repositories名字必须为 <code>用户名.github.io</code>.</p>
+<h2 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
+<p>在三次回车之后，可以生成id_rsa.pub文件，这里面就是SSH key的内容，然后使用编辑器打开这个文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gedit ~&#x2F;.ssh&#x2F;id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>把里面的内容都拷贝下来，打开Github，点击右上角自己的头像，点击Settings，再点击SSH and GPG keys，之后添加New SSH Key，最后把复制的信息都粘贴进去，title可以不写，最后输入以下命令判断SSH是否配置好</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>如果出现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi! You&#39;ve successfully authenticated, but GitHubdoes not provide shell access.</span><br></pre></td></tr></table></figure>
+<p>就表示你已经配置好了SSH.</p>
+<h2 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h2><h3 id="设置Git的user-name和email"><a href="#设置Git的user-name和email" class="headerlink" title="设置Git的user name和email"></a>设置Git的user name和email</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;github用户名&quot;</span><br><span class="line">git config --global user.email &quot;你注册的邮箱地址&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你注册的邮箱地址&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="配置Deployment"><a href="#配置Deployment" class="headerlink" title="配置Deployment"></a>配置Deployment</h3><p>在 <code>/_config.yml</code>文件中，按照如下修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo: git@github.com:用户名&#x2F;用户名.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<h3 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h3><p>使用以下命令发布,使用 <code>用户名.github.io</code> 就可以访问博客了.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h2 id="使用NexT主题"><a href="#使用NexT主题" class="headerlink" title="使用NexT主题"></a>使用NexT主题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd hexo</span><br><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+<p>当clone完成后,打开站点配置文件 <code>/_config.yml</code>,找到 <code>theme</code> 字段，并将其值更改为 <code>next</code>.然后清除Hexo缓存.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<p>可以查阅<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT官网</a>查看详情.</p>
+<h2 id="撰写新博客"><a href="#撰写新博客" class="headerlink" title="撰写新博客"></a>撰写新博客</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<p>可以在命令中指定文章的布局（layout）,默认为 post，可以通过修改 <code>/_config.yml</code> 中的 <code>default_layout</code> 参数来指定默认布局.这样所有的文章都会以md形式保存在 <code>/source/_post</code> 文件夹中.然后使用如下命令发布新博客</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h2 id="删除博客"><a href="#删除博客" class="headerlink" title="删除博客"></a>删除博客</h2><p>删除在 <code>/source/_post</code> 文件夹中的文章，然后重新运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/13/Windows-10%E9%85%8D%E7%BD%AEYOLO-v3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Walter Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/13/Windows-10%E9%85%8D%E7%BD%AEYOLO-v3/" itemprop="url">Windows 10配置YOLO v3</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-13T19:12:09+08:00">
+                2019-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>参考：<br><a href="https://blog.csdn.net/KID_yuan/article/details/88380269" target="_blank" rel="noopener">https://blog.csdn.net/KID_yuan/article/details/88380269</a><br><a href="https://github.com/AlexeyAB/darknet" target="_blank" rel="noopener">https://github.com/AlexeyAB/darknet</a>  </p>
+<p>环境：<br>Windows 10<br>Visual Studio 2015<br>CUDA 10.1<br>CUDNN 7.5.0 for CUDA10.1<br>OpenCV 3.3.1  </p>
+<h2 id="安装Visual-Studio-2015"><a href="#安装Visual-Studio-2015" class="headerlink" title="安装Visual Studio 2015"></a>安装Visual Studio 2015</h2><p>由于本教程使用的YOLO v3源码适配Visual Studio 2015，所以建议安装Visual Studio 2015</p>
+<h3 id="下载Visual-Studio-2015安装包"><a href="#下载Visual-Studio-2015安装包" class="headerlink" title="下载Visual Studio 2015安装包"></a>下载Visual Studio 2015安装包</h3><p>Visual Studio 2015安装包来源为<a href="https://msdn.itellyou.cn" target="_blank" rel="noopener">MSDN</a>，具体为Visual Studio 2015专业版<br>Visual Studio 2015专业版激活密匙为：HMGNV-WCYXV-X7G9W-YCX63-B98R2<br>使用迅雷打开以下链接并下载：ed2k://|file|cn_visual_studio_professional_2015_with_update_3_x86_x64_dvd_8923256.iso|7745202176|DD35D3D169D553224BE5FB44E074ED5E|/</p>
+<h3 id="安装Visual-Studio-2015-1"><a href="#安装Visual-Studio-2015-1" class="headerlink" title="安装Visual Studio 2015"></a>安装Visual Studio 2015</h3><h4 id="使用“Windows资源管理器”打开Visual-Studio-2015的iso文件，然后双击打开vs-professional-exe"><a href="#使用“Windows资源管理器”打开Visual-Studio-2015的iso文件，然后双击打开vs-professional-exe" class="headerlink" title="使用“Windows资源管理器”打开Visual Studio 2015的iso文件，然后双击打开vs_professional.exe"></a>使用“Windows资源管理器”打开Visual Studio 2015的iso文件，然后双击打开vs_professional.exe</h4><p><img src="https://i.loli.net/2019/12/12/ZYvCf5IU2JeStp8.png" alt="1074181-20161203235816990-1304885083.png">  </p>
+<h4 id="更改“安装位置”，安装类型选择“默认值”，后单击“安装”"><a href="#更改“安装位置”，安装类型选择“默认值”，后单击“安装”" class="headerlink" title="更改“安装位置”，安装类型选择“默认值”，后单击“安装”"></a>更改“安装位置”，安装类型选择“默认值”，后单击“安装”</h4><p><img src="https://i.loli.net/2019/12/12/bPlkZLAFdzNC8D4.gif" alt="4-1Z314094526447.jpg">  </p>
+<h4 id="安装功能组件的页面"><a href="#安装功能组件的页面" class="headerlink" title="安装功能组件的页面"></a>安装功能组件的页面</h4><p><img src="https://i.loli.net/2019/12/12/BQqDNWYoi9Z4xRb.png" alt="1074181-20161203235902568-125842904.png">  </p>
+<h4 id="安装完成并启动"><a href="#安装完成并启动" class="headerlink" title="安装完成并启动"></a>安装完成并启动</h4><p><img src="https://i.loli.net/2019/12/12/T2WdjfrbAtcXu9K.png" alt="4-1Z314095412539.png"></p>
+<h2 id="安装CUDA-10-1"><a href="#安装CUDA-10-1" class="headerlink" title="安装CUDA 10.1"></a>安装CUDA 10.1</h2><p>YOLO v3需要使用<a href="https://developer.nvidia.com/cuda-10.1-download-archive-base?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal" target="_blank" rel="noopener">CUDA 10.1</a>  </p>
+<h3 id="下载CUDA-10-1安装包"><a href="#下载CUDA-10-1安装包" class="headerlink" title="下载CUDA 10.1安装包"></a>下载CUDA 10.1安装包</h3><p>下载CUDA 10.1的网址为：<br><a href="https://developer.nvidia.com/cuda-10.1-download-archive-base?target_os=Windows&amp;target_arch=x86_64&amp;target_version=10&amp;target_type=exelocal" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-10.1-download-archive-base?target_os=Windows&amp;target_arch=x86_64&amp;target_version=10&amp;target_type=exelocal</a><br>选择CUDA 10.1安装包选择的具体界面如下，安装包的名称为“cuda_10.1.105_418.96_win10.exe”，<br><img src="https://i.loli.net/2019/12/12/jxQ3RyUhgJ9OmGB.jpg" alt="CUDA.JPG"></p>
+<h3 id="安装CUDA-10-1-1"><a href="#安装CUDA-10-1-1" class="headerlink" title="安装CUDA 10.1"></a>安装CUDA 10.1</h3><h4 id="打开CUDA-10-1安装程序"><a href="#打开CUDA-10-1安装程序" class="headerlink" title="打开CUDA 10.1安装程序"></a>打开CUDA 10.1安装程序</h4><p>安装路径可以默认,也可以自定义。之后点击ok<br><img src="https://i.loli.net/2019/12/12/StYsMPRVWZzHb8T.jpg" alt="捕获.JPG"></p>
+<h4 id="等待安装"><a href="#等待安装" class="headerlink" title="等待安装"></a>等待安装</h4><p><img src="https://i.loli.net/2019/12/12/82feKiZGr3bJPwD.png" alt="20181012151838665.png"><br>选择“精简”安装<br><img src="https://i.loli.net/2019/12/12/kLzlxCqNoHRZ1KB.png" alt="2018101215220782.png"><br>继续等待安装完成</p>
+<h3 id="验证安装成功"><a href="#验证安装成功" class="headerlink" title="验证安装成功"></a>验证安装成功</h3><p>打开Windows的Powershell，输入“nvcc -V”，出现如下所示文字表示CUDA安装成功<br><img src="https://i.loli.net/2019/12/12/JW43x78pcf96Ca5.jpg" alt="捕获.JPG"></p>
+<h2 id="安装CUDNN-7-5-0-for-CUDA10-1"><a href="#安装CUDNN-7-5-0-for-CUDA10-1" class="headerlink" title="安装CUDNN 7.5.0 for CUDA10.1"></a>安装<a href="https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.5.0.56/prod/10.1_20190225/cudnn-10.1-windows10-x64-v7.5.0.56.zip" target="_blank" rel="noopener">CUDNN 7.5.0 for CUDA10.1</a></h2><h3 id="下载CUDNN-7-5-0-for-CUDA10-1安装包"><a href="#下载CUDNN-7-5-0-for-CUDA10-1安装包" class="headerlink" title="下载CUDNN 7.5.0 for CUDA10.1安装包"></a>下载CUDNN 7.5.0 for CUDA10.1安装包</h3><p>CUDNN 7.5.0 for CUDA10.1的下载地址如下，需要先注册一个NVIDIA的账户，<br><a href="https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.5.0.56/prod/10.1_20190225/cudnn-10.1-windows10-x64-v7.5.0.56.zip" target="_blank" rel="noopener">https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.5.0.56/prod/10.1_20190225/cudnn-10.1-windows10-x64-v7.5.0.56.zip</a></p>
+<h3 id="配置CUDNN-7-5-0-for-CUDA10-1"><a href="#配置CUDNN-7-5-0-for-CUDA10-1" class="headerlink" title="配置CUDNN 7.5.0 for CUDA10.1"></a>配置CUDNN 7.5.0 for CUDA10.1</h3><p>下载后，将下载文件解压，然后将文件夹下的“bin”，“include”，“lib”复制到“C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1”文件夹下，具体如下，<br><img src="https://pic2.superbed.cn/item/5df1ddb01f8f59f4d65a77a4.png" alt=""></p>
+<h2 id="安装OpenCV-3-3-1"><a href="#安装OpenCV-3-3-1" class="headerlink" title="安装OpenCV 3.3.1"></a>安装OpenCV 3.3.1</h2><p>YOLO v3推荐的OpenCV版本需要&lt;3.4.0同时&gt;2.4.0，所以本教程选择3.3.1版本</p>
+<h3 id="下载OpenCV-3-3-1安装包"><a href="#下载OpenCV-3-3-1安装包" class="headerlink" title="下载OpenCV 3.3.1安装包"></a>下载OpenCV 3.3.1安装包</h3><p>OpenCV 3.3.1的地址为：<a href="https://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.3.1/opencv-3.3.1-vc14.exe/download" target="_blank" rel="noopener">https://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.3.1/opencv-3.3.1-vc14.exe/download</a></p>
+<h3 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h3><p>接着只需要将OpenCV的安装包解压缩，然后配置环境变量就行了，本教程的环境变量路径如下，<br><img src="https://s2.ax1x.com/2019/12/12/Q6prFK.jpg" alt="Q6prFK.jpg"></p>
+<h2 id="编译YOLO-v3"><a href="#编译YOLO-v3" class="headerlink" title="编译YOLO v3"></a>编译YOLO v3</h2><h3 id="下载YOLO-v3源码"><a href="#下载YOLO-v3源码" class="headerlink" title="下载YOLO v3源码"></a>下载YOLO v3源码</h3><p>YOLO v3源码地址如下，可以使用git或者直接打包下载，<br><a href="https://github.com/AlexeyAB/darknet" target="_blank" rel="noopener">https://github.com/AlexeyAB/darknet</a></p>
+<h3 id="配置OpenCV的dll文件"><a href="#配置OpenCV的dll文件" class="headerlink" title="配置OpenCV的dll文件"></a>配置OpenCV的dll文件</h3><p>此时先进入“<em>darknet\build\darknet\x64</em>”文件夹下，将OpenCV3.3.1文件夹“<em>opencv\build\x64\vc14\bin</em>”中的两个dll文件：opencv_ffmpeg331_64.dll和opencv_world331.dll复制到该文件夹下，<br><img src="https://s2.ax1x.com/2019/12/12/Q6ArB4.jpg" alt="Q6ArB4.jpg"></p>
+<h3 id="修改配置文件“darknet-vcxproj”"><a href="#修改配置文件“darknet-vcxproj”" class="headerlink" title="修改配置文件“darknet.vcxproj”"></a>修改配置文件“<em>darknet.vcxproj</em>”</h3><p>进入YOLO文件夹“<em>darknet\build\darknet</em>”下，使用文本编辑器打开“<em>darknet.vcxproj</em>”，将文件中的“<em>CUDA 10.0</em>”改为“<em>CUDA 10.1</em>”，一共有两处需要修改，分别是55行和307行  </p>
+<h3 id="编译项目"><a href="#编译项目" class="headerlink" title="编译项目"></a>编译项目</h3><h4 id="打开“darknet-sln”"><a href="#打开“darknet-sln”" class="headerlink" title="打开“darknet.sln”"></a>打开“<em>darknet.sln</em>”</h4><p>使用Visual Studio打开“<em>darknet.sln</em>”文件。如果提示需要安装附加组件，那就顺着提示框进行安装。<br>同时对“<em>darknet.sln</em>”进行配置，注意上面应选为release和x64，<br><img src="https://s2.ax1x.com/2019/12/12/Q6u2ZT.jpg" alt="Q6u2ZT.jpg"></p>
+<h4 id="配置Visual-Studio中的OpenCV目录路径"><a href="#配置Visual-Studio中的OpenCV目录路径" class="headerlink" title="配置Visual Studio中的OpenCV目录路径"></a>配置Visual Studio中的OpenCV目录路径</h4><p>打开“项目-属性-VC++目录”，修改包含目录和库目录，即添加OpenCV的路径（按照自己的OpenCV的路径来进行添加），<br><img src="https://s2.ax1x.com/2019/12/12/Q6Kwm6.jpg" alt="Q6Kwm6.jpg"><br>选择“编辑”进入包含目录和库目录的编辑页，加入如下内容，<br><img src="https://s2.ax1x.com/2019/12/12/Q6KHpj.jpg" alt="Q6KHpj.jpg"><br><img src="https://s2.ax1x.com/2019/12/12/Q6Mph4.jpg" alt="Q6Mph4.jpg"></p>
+<h4 id="附加OpenCV依赖项"><a href="#附加OpenCV依赖项" class="headerlink" title="附加OpenCV依赖项"></a>附加OpenCV依赖项</h4><p>依然是在darknet属性页，做如下修改<br><img src="https://s2.ax1x.com/2019/12/12/Q6M3ut.jpg" alt="Q6M3ut.jpg"><br><img src="https://s2.ax1x.com/2019/12/12/Q6Mwgs.jpg" alt="Q6Mwgs.jpg"></p>
+<h4 id="编译项目-1"><a href="#编译项目-1" class="headerlink" title="编译项目"></a>编译项目</h4><p>这样已经完成对项目的配置，右键“darknet”重新生成就行了<br><img src="https://s2.ax1x.com/2019/12/12/Q6QadK.png" alt="Q6QadK.png"><br>如果编译一切正常，结果如下，<br><img src="https://s2.ax1x.com/2019/12/12/Q6QWo8.jpg" alt="Q6QWo8.jpg"><br>在“<em>darknet\build\darknet\x64</em>”文件夹下多出一个“<em>darknet.exe</em>”文件，就是编译得到的可执行文件，<br><img src="https://s2.ax1x.com/2019/12/12/Q6QHLq.jpg" alt="Q6QHLq.jpg">  </p>
+<h2 id="测试程序"><a href="#测试程序" class="headerlink" title="测试程序"></a>测试程序</h2><h3 id="下载权重"><a href="#下载权重" class="headerlink" title="下载权重"></a>下载权重</h3><p>在运行程序之前，还需要下载官网训练好的权重，<br><a href="https://pjreddie.com/media/files/yolov3.weights" target="_blank" rel="noopener">https://pjreddie.com/media/files/yolov3.weights</a><br>然后把权重放在“<em>darknet\x64\weights</em>”文件夹下</p>
+<h3 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h3><h4 id="检测图片"><a href="#检测图片" class="headerlink" title="检测图片"></a>检测图片</h4><p>在“<em>build\darknet\x64</em>”文件夹下，使用“shift+右键”打开Powershell，利用darknet.exe执行检测效果，</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .&#x2F;darknet.exe detector test data\coco.data yolov3.cfg .\weights\yolov3.weights .\data\dog.jpg</span><br></pre></td></tr></table></figure>
 <p>结果如下，<br><img src="https://s2.ax1x.com/2019/12/12/Q63hFK.jpg" alt="Q63hFK.jpg">  </p>
-<h4 id="6-2-2-检测视频"><a href="#6-2-2-检测视频" class="headerlink" title="6.2.2 检测视频"></a>6.2.2 检测视频</h4><p>在data文件下放了一个视频文件，“.\data\TownCentre.avi”，然后执行命令，</p>
+<h4 id="检测视频"><a href="#检测视频" class="headerlink" title="检测视频"></a>检测视频</h4><p>在data文件下放了一个视频文件，“.\data\TownCentre.avi”，然后执行命令，</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .&#x2F;darknet.exe detector demo data\coco.data yolov3.cfg .\weights\yolov3.weights .\data\TownCentre.avi</span><br></pre></td></tr></table></figure>
 <p>使用YOLO保存检测后的视频文件时，可以用下面命令，即增加了置信阈值选项0.25，以及输出视频文件路径与名称</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .&#x2F;darknet.exe detector demo data\coco.data yolov3.cfg .\weights\yolov3.weights .\data\TownCentre.avi -thresh 0.25 -out_filename .\data\test_result.avi</span><br></pre></td></tr></table></figure>
-<h4 id="6-2-3-使用摄像头检测目标"><a href="#6-2-3-使用摄像头检测目标" class="headerlink" title="6.2.3 使用摄像头检测目标"></a>6.2.3 使用摄像头检测目标</h4><p>可以使用笔记本自带的视像头检测目标，使用如下命令，</p>
+
+<h4 id="使用摄像头检测目标"><a href="#使用摄像头检测目标" class="headerlink" title="使用摄像头检测目标"></a>使用摄像头检测目标</h4><p>可以使用笔记本自带的视像头检测目标，使用如下命令，</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .&#x2F;darknet.exe detector demo data\coco.data yolov3.cfg .\weights\yolov3.weights</span><br></pre></td></tr></table></figure>
 
 
@@ -535,7 +712,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-author-name" itemprop="name">Walter Chen</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -546,7 +723,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -554,6 +731,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
             
 
           </nav>
@@ -591,7 +777,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Walter Chen</span>
 
   
 </div>
@@ -605,7 +791,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -704,6 +890,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
 
